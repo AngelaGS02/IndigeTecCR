@@ -1,0 +1,125 @@
+{
+    "ingredients": [
+      {
+        "name_spanish": "Maíz",
+        "names_indigenous_languages": {
+          "Bribri": "Diköl",
+          "Cabécar": "Diköl",
+          "Ngäbere": "Dö"
+        },
+        "production_location": "Región de Talamanca, Coto Brus",
+        "exists_today": true,
+        "consumption_by_group": {
+          "Bribri": {
+            "frequency": "Alto",
+            "uses": "Tortillas, chicha, tamales"
+          },
+          "Cabécar": {
+            "frequency": "Alto",
+            "uses": "Tortillas, bebidas tradicionales"
+          },
+          "Ngäbe": {
+            "frequency": "Moderado",
+            "uses": "Tortillas, bollos"
+          }
+        }
+      },
+      {
+        "name_spanish": "Cacao",
+        "names_indigenous_languages": {
+          "Bribri": "Tsiru",
+          "Cabécar": "Tsiru",
+          "Ngäbere": "Tsi"
+        },
+        "production_location": "Región de Talamanca, Sixaola",
+        "exists_today": true,
+        "consumption_by_group": {
+          "Bribri": {
+            "frequency": "Moderado",
+            "uses": "Bebida ceremonial, medicina tradicional"
+          },
+          "Cabécar": {
+            "frequency": "Moderado",
+            "uses": "Bebida tradicional, ceremonias"
+          },
+          "Ngäbe": {
+            "frequency": "Bajo",
+            "uses": "Bebidas, rituales"
+          }
+        }
+      },
+      {
+        "name_spanish": "Yuca",
+        "names_indigenous_languages": {
+          "Bribri": "Ñö",
+          "Cabécar": "Ñö",
+          "Ngäbere": "Diko"
+        },
+        "production_location": "Región de Talamanca, Coto Brus, Valle Central",
+        "exists_today": true,
+        "consumption_by_group": {
+          "Bribri": {
+            "frequency": "Alto",
+            "uses": "Alimento básico, chicha"
+          },
+          "Cabécar": {
+            "frequency": "Moderado",
+            "uses": "Alimento básico, fermentado"
+          },
+          "Ngäbe": {
+            "frequency": "Moderado",
+            "uses": "Alimento básico"
+          }
+        }
+      },
+      {
+        "name_spanish": "Plátano",
+        "names_indigenous_languages": {
+          "Bribri": "Surö",
+          "Cabécar": "Surö",
+          "Ngäbere": "Duri"
+        },
+        "production_location": "Región de Talamanca, Valle Central",
+        "exists_today": true,
+        "consumption_by_group": {
+          "Bribri": {
+            "frequency": "Alto",
+            "uses": "Alimento básico, chicha"
+          },
+          "Cabécar": {
+            "frequency": "Alto",
+            "uses": "Alimento básico, bebidas"
+          },
+          "Ngäbe": {
+            "frequency": "Moderado",
+            "uses": "Alimento básico, postres"
+          }
+        }
+      },
+      {
+        "name_spanish": "Ayote",
+        "names_indigenous_languages": {
+          "Bribri": "Chë",
+          "Cabécar": "Chë",
+          "Ngäbere": "Noto"
+        },
+        "production_location": "Región de Talamanca, Coto Brus",
+        "exists_today": true,
+        "consumption_by_group": {
+          "Bribri": {
+            "frequency": "Moderado",
+            "uses": "Sopas, postres"
+          },
+          "Cabécar": {
+            "frequency": "Moderado",
+            "uses": "Sopas, platos tradicionales"
+          },
+          "Ngäbe": {
+            "frequency": "Bajo",
+            "uses": "Comida ocasional"
+          }
+        }
+      }
+    ]
+  }
+  

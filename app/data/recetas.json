@@ -1,0 +1,155 @@
+{
+  "indigenous_recipes": [
+    {
+      "province": 4,
+      "recipe_name": "Chicha de Maíz",
+      "ingredients": [
+        {
+          "name_spanish": "Maíz",
+          "names_indigenous_languages": {
+            "Bribri": "Diköl",
+            "Cabécar": "Diköl",
+            "Ngäbere": "Dö"
+          },
+          "quantity": "2 kg"
+        },
+        {
+          "name_spanish": "Agua",
+          "names_indigenous_languages": {
+            "Bribri": "Dukù",
+            "Cabécar": "Dukù",
+            "Ngäbere": "Dutu"
+          },
+          "quantity": "5 litros"
+        },
+        {
+          "name_spanish": "Cáscara de piña (opcional)",
+          "names_indigenous_languages": {
+            "Bribri": "Tsuru",
+            "Cabécar": "Tsuru",
+            "Ngäbere": "Pichuru"
+          },
+          "quantity": "200 gramos"
+        }
+      ],
+      "preparation_steps": [
+        "Remojar el maíz durante una noche.",
+        "Moler el maíz hasta obtener una masa suave.",
+        "Cocinar la masa en agua durante 2 horas, revolviendo constantemente.",
+        "Agregar cáscara de piña si se desea y continuar cocinando por 1 hora más.",
+        "Dejar fermentar la mezcla durante 2 días en un lugar fresco."
+      ],
+      "preparation_time": "3 días",
+      "occasion": "Preparada para ceremonias tradicionales y festividades",
+      "who_prepares": "Principalmente las mujeres mayores de la comunidad",
+      "used_for_festivities": true
+    },
+    {
+      "province": 7,
+      "recipe_name": "Tamales Indígenas",
+      "ingredients": [
+        {
+          "name_spanish": "Maíz",
+          "names_indigenous_languages": {
+            "Bribri": "Diköl",
+            "Cabécar": "Diköl",
+            "Ngäbere": "Dö"
+          },
+          "quantity": "3 kg"
+        },
+        {
+          "name_spanish": "Hojas de bijagua",
+          "names_indigenous_languages": {
+            "Bribri": "Kechö",
+            "Cabécar": "Kechö",
+            "Ngäbere": "Wede"
+          },
+          "quantity": "Suficiente para envolver"
+        },
+        {
+          "name_spanish": "Carne de cerdo",
+          "names_indigenous_languages": {
+            "Bribri": "Shbök",
+            "Cabécar": "Shbök",
+            "Ngäbere": "Omo"
+          },
+          "quantity": "1 kg"
+        },
+        {
+          "name_spanish": "Frijoles",
+          "names_indigenous_languages": {
+            "Bribri": "Tuböl",
+            "Cabécar": "Tuböl",
+            "Ngäbere": "Nebo"
+          },
+          "quantity": "500 gramos"
+        }
+      ],
+      "preparation_steps": [
+        "Cocinar el maíz y molerlo para hacer la masa.",
+        "Cocinar la carne de cerdo y los frijoles por separado.",
+        "Extender la masa sobre las hojas de bijagua.",
+        "Colocar una porción de carne y frijoles en el centro de la masa.",
+        "Envolver el tamal con la hoja y amarrar bien.",
+        "Cocinar los tamales en agua hirviendo durante 3 horas."
+      ],
+      "preparation_time": "1 día",
+      "occasion": "Preparado durante la época de cosecha y para festividades importantes",
+      "who_prepares": "Comunidades enteras participan, pero las mujeres lideran el proceso",
+      "used_for_festivities": true
+    },
+    {
+      "province": 1,
+      "recipe_name": "Sopa de Pescado con Plátano",
+      "ingredients": [
+        {
+          "name_spanish": "Pescado",
+          "names_indigenous_languages": {
+            "Bribri": "Yak",
+            "Cabécar": "Yak",
+            "Ngäbere": "Yök"
+          },
+          "quantity": "1 kg"
+        },
+        {
+          "name_spanish": "Plátano verde",
+          "names_indigenous_languages": {
+            "Bribri": "Surö",
+            "Cabécar": "Surö",
+            "Ngäbere": "Duri"
+          },
+          "quantity": "4 unidades"
+        },
+        {
+          "name_spanish": "Achiote",
+          "names_indigenous_languages": {
+            "Bribri": "Duluk",
+            "Cabécar": "Duluk",
+            "Ngäbere": "Nisuru"
+          },
+          "quantity": "2 cucharadas"
+        },
+        {
+          "name_spanish": "Agua",
+          "names_indigenous_languages": {
+            "Bribri": "Dukù",
+            "Cabécar": "Dukù",
+            "Ngäbere": "Dutu"
+          },
+          "quantity": "3 litros"
+        }
+      ],
+      "preparation_steps": [
+        "Limpiar y cortar el pescado en trozos.",
+        "Pelar y cortar los plátanos en rodajas.",
+        "Hervir agua con achiote y agregar el pescado y plátano.",
+        "Cocinar a fuego lento hasta que el plátano esté suave.",
+        "Servir caliente, decorado con hierbas locales."
+      ],
+      "preparation_time": "2 horas",
+      "occasion": "Preparado durante la temporada de pesca y para reuniones familiares",
+      "who_prepares": "Principalmente los hombres, pero con la ayuda de mujeres para los ingredientes",
+      "used_for_festivities": false
+    }
+  ]
+}
