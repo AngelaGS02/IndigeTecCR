@@ -1,7 +1,6 @@
-{
-  "indigenous_recipes": [
+[
     {
-      "province": 4,
+      "province": "Limon",
       "recipe_name": "Chicha de Maíz",
       "ingredients": [
         {
@@ -45,7 +44,7 @@
       "used_for_festivities": true
     },
     {
-      "province": 7,
+      "province": "Guanacaste",
       "recipe_name": "Tamales Indígenas",
       "ingredients": [
         {
@@ -99,7 +98,7 @@
       "used_for_festivities": true
     },
     {
-      "province": 1,
+      "province": "San Jose",
       "recipe_name": "Sopa de Pescado con Plátano",
       "ingredients": [
         {
@@ -151,5 +150,4 @@
       "who_prepares": "Principalmente los hombres, pero con la ayuda de mujeres para los ingredientes",
       "used_for_festivities": false
     }
-  ]
-}
+]
