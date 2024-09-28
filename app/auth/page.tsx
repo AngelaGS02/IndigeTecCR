@@ -19,13 +19,7 @@ export default function Login() {
         setEmail(email);
         setPassword(password);
         //TODO: Add a check to see if the email and password are correct, fetching from the database
-
-        
-        router.push('/products');
-        /*
-        docker run -d --name mongo_test -p 27017:27017 --net cr_network -v mongodbdata:/data/db mongo:4.4
-        */
-
+        router.push('/recipes');
 
     }
 

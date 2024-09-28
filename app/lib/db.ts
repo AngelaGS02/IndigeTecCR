@@ -1,17 +1,16 @@
+// Maneja la conexión
 
-//Maneja la conexión
+import mongoose from 'mongoose';
 
-import { MongoClient } from 'mongodb';
+const uri = process.env.MONGO_URI as string;
 
-const uri = 'mongodb://localhost:27017/';
-const options = {};
+let connection: Promise<typeof mongoose>;
 
-let client;
-let clientPromise;
+const connectDB = async (): Promise<typeof mongoose> => {
+  if (!connection) {
+    connection = mongoose.connect("mongodb://localhost:27017/indigenous_heritage");
+  }
+  return connection;
+};
 
-if (!client) {
-  client = new MongoClient(uri, options);
-  clientPromise = client.connect();
-}
-
-export default clientPromise;
+export default connectDB;

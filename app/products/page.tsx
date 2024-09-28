@@ -1,55 +1,66 @@
-// Create a grid of cards with a product using a stub and material ui
+"use client";
+import React,{useEffect, useState} from "react";
+import useSWR from "swr";
+import { fetcher } from "../libs";
+import Post from "../components/Post";
+import { PostModel } from "../models";
+import Link from "next/link";
 
-import React from 'react';
-import { Grid, Card, CardMedia, CardContent, Typography, CardActions, Button } from '@mui/material';
+export default function Posts() {
+  const [posts,setPosts] = useState<PostModel[]>([]);
+  const { data, error, isLoading } = useSWR<any>(`/api/posts`, fetcher);
+  useEffect(()=>{
+    if(data && data.result.data)
+    {
+      console.log(data.result.data);
+      setPosts(data.result.data);
+    }
+  },[data,isLoading]);
+  if (error) return <div>Failed to load</div>;
+  if (isLoading) return <div>Loading...</div>;
+  if (!data) return null;
+  let delete_Post : PostModel['deletePost']= async (id:number) => {
+    const res = await fetch(`/api/posts/${id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+    });
+    const content = await res.json();
+    if(content.success>0)
+    {
 
-const products = [
-  {
-    id: 1,
-    name: 'Product 1',
-    description: 'This is a product',
-    price: 100,
-    image: 'https://via.placeholder.com/150',
-  },
-  {
-    id: 2,
-    name: 'Product 2',
-    description: 'This is another product',
-    price: 200,
-    image: 'https://via.placeholder.com/150',
-  },
-];
-
-const Products = () => {
+      setPosts(posts?.filter((post:PostModel)=>{  return post.id !== id  }));
+    }
+  }
   return (
-    <Grid container spacing={2}>
-      {products.map((product) => (
-        <Grid item xs={12} sm={6} md={4} lg={3} key={product.id}>
-          <Card>
-            <CardMedia
-              component="img"
-              height="140"
-              image={product.image}
-              alt={product.name}
-            />
-            <CardContent>
-              <Typography gutterBottom variant="h5" component="h2">
-                {product.name}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {product.description}
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button size="small" color="primary">
-                Add to Cart
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-      ))}
-    </Grid>
-  );
-};
+    <div className="w-full max-w-7xl m-auto">
+      <table className="w-full border-collapse border border-slate-400">
+        <caption className="caption-top py-5 font-bold text-green-500 text-2xl">
+          List Posts - Counter :
+          <span className="text-red-500 font-bold">{ posts?.length}</span>
+        </caption>
 
-export default Products;
+        <thead>
+          <tr className="text-center">
+            <th className="border border-slate-300">ID</th>
+            <th className="border border-slate-300">Title</th>
+            <th className="border border-slate-300">Hide</th>
+            <th className="border border-slate-300">Created at</th>
+            <th className="border border-slate-300">Modify</th>
+          </tr>
+        </thead>
+        <tbody>
+           <tr>
+              <td colSpan={5}>
+                 <Link href={`/post/create`} className="bg-green-500 p-2 inline-block text-white">Create</Link>
+              </td>
+           </tr>
+           {
+              posts && posts.map((item : PostModel)=><Post key={item.id} {...item} deletePost = {delete_Post} />)
+           }
+        </tbody>
+      </table>
+    </div>
+  );
+}
