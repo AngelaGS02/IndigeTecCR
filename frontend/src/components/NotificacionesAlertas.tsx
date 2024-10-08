@@ -10,7 +10,7 @@ const NotificacionesAlertas: React.FC = () => {
 
       {/* Aquí se incluirían las notificaciones relacionadas con grupos sin actividad */}
       <Typography variant="body1">
-        No hay actividad en los grupos: Grupo 1, Grupo 2.
+        No hay grupos inactivos.
       </Typography>
     </Container>
   );

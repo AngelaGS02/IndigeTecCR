@@ -9,6 +9,7 @@ import Festividades from './pages/Festividades';
 import AddEditFestividad from './pages/AddEditFestividad';
 import Investigador from './pages/Investigador';
 import Colaborador from './pages/Colaborador';
+import EditarReceta from './pages/EditarReceta';
 
 const AppRouter: React.FC = () => {
   return (
@@ -21,7 +22,7 @@ const AppRouter: React.FC = () => {
       <Route path="/festividades" element={<Festividades />} />
       <Route path="/festividades/add" element={<AddEditFestividad />} />
       <Route path="/festividades/edit/:id" element={<AddEditFestividad />} />
-      {/* Nuevas rutas */}
+      <Route path="/recetas/edit/:id" element={<EditarReceta />} />
       <Route path="/investigador" element={<Investigador />} />
       <Route path="/colaborador" element={<Colaborador />} />
     </Routes>

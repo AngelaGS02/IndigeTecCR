@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Typography, List, ListItem, ListItemText, Button } from '@mui/material';
+import { useNavigate } from 'react-router-dom'; // Importar useNavigate para redireccionar
 import api from '../services/api';
 
 const Recetas: React.FC = () => {
   const [recetas, setRecetas] = useState([]);
+  const navigate = useNavigate(); // Inicializar useNavigate para redirección
 
   useEffect(() => {
     const fetchRecetas = async () => {
@@ -18,6 +20,22 @@ const Recetas: React.FC = () => {
     fetchRecetas();
   }, []);
 
+  // Manejar la redirección a la página de edición
+  const handleUpdate = (id: string) => {
+    navigate(`/recetas/edit/${id}`);
+  };
+
+  // Manejar la eliminación de la receta
+  const handleDelete = async (id: string) => {
+    try {
+      await api.delete(`/recetas/${id}`);
+      // Actualizar la lista de recetas después de la eliminación
+      setRecetas(recetas.filter((receta: any) => receta._id !== id));
+    } catch (error) {
+      console.error('Error al eliminar la receta:', error);
+    }
+  };
+
   return (
     <Container>
       <Typography variant="h4" gutterBottom>Recetas</Typography>
@@ -28,8 +46,21 @@ const Recetas: React.FC = () => {
               primary={receta.recipe_name} 
               secondary={`Preparación: ${receta.preparation_time}`} 
             />
-            <Button variant="contained" color="primary">Editar</Button>
-            <Button variant="contained" color="secondary">Eliminar</Button>
+            <Button 
+              variant="contained" 
+              color="primary" 
+              onClick={() => handleUpdate(receta._id)}
+              style={{ marginRight: '10px' }}
+            >
+              Editar
+            </Button>
+            <Button 
+              variant="contained" 
+              color="secondary" 
+              onClick={() => handleDelete(receta._id)}
+            >
+              Eliminar
+            </Button>
           </ListItem>
         ))}
       </List>
