@@ -22,9 +22,9 @@ const ResumenGeneral: React.FC = () => {
         series={[
           {
             data: [
-              { id: 0, value: 10, label: 'Producto A' },
-              { id: 1, value: 15, label: 'Producto B' },
-              { id: 2, value: 5, label: 'Producto C' },
+              { id: 0, value: 10, label: 'Maiz' },
+              { id: 1, value: 15, label: 'Cacao' },
+              { id: 2, value: 5, label: 'Cafe' },
             ],
           },
         ]}

@@ -10,6 +10,7 @@ import AddEditFestividad from './pages/AddEditFestividad';
 import Investigador from './pages/Investigador';
 import Colaborador from './pages/Colaborador';
 import EditarReceta from './pages/EditarReceta';
+import EditarPoblacion from './pages/EditarPoblacion';
 
 const AppRouter: React.FC = () => {
   return (
@@ -18,6 +19,8 @@ const AppRouter: React.FC = () => {
       <Route path="/login" element={<Login />} />
       <Route path="/recetas" element={<Recetas />} />
       <Route path="/poblaciones" element={<Poblaciones />} />
+
+      <Route path="/poblaciones/edit/:id" element={<EditarPoblacion />} />
       <Route path="/ingredientes" element={<Ingredientes />} />
       <Route path="/festividades" element={<Festividades />} />
       <Route path="/festividades/add" element={<AddEditFestividad />} />

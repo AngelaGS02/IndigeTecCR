@@ -28,6 +28,8 @@ const Recetas: React.FC = () => {
   // Manejar la eliminación de la receta
   const handleDelete = async (id: string) => {
     try {
+        console.log("Eliminando Receta...");
+        
       await api.delete(`/recetas/${id}`);
       // Actualizar la lista de recetas después de la eliminación
       setRecetas(recetas.filter((receta: any) => receta._id !== id));
